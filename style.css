@@ -25,7 +25,7 @@
  .container{
      display: grid;
      grid-template-columns: 2fr 1fr;
-     grid-template-rows: repeat(4, auto);
+     grid-template-rows: repeat(10, auto);
      grid-gap: 1.5em;
  }
 
@@ -41,7 +41,8 @@
 
  main{
      grid-column: 1/2;
-     grid-row: 3/5;
+     grid-row: 3/10;
+     background-color: red;
  }
 
  .sidebar-top{
@@ -51,5 +52,134 @@
 
  .sidebar-bottom{
      grid-column: 2/3;
-     grid-row: 4/5;
+     grid-row: 4/10;
+ }
+
+
+
+ /*NAV SECTION*/
+
+ .site-nav {
+     display: flex;
+     padding: .5em;
+     list-style-type: none;
+     background-color: #a46d26;
+     border-radius: .2em;
+ }
+
+ .site-nav > li {
+     margin-top: 0;
+ }
+
+ .site-nav > li > a {
+     display: block;
+     padding: .5em 1em;
+     background-color: #b1afaf;
+     color: black;
+     text-decoration: none;
+ }
+
+ .site-nav > li > a:hover {
+     background-color: #858383;
+ }
+
+ .site-nav > li + li {
+     margin-left: .5em;
+ }
+
+ .site-nav li:first-child{
+     margin-left: auto;
+ }
+
+ .site-nav li:last-child{
+     margin-right: auto;
+ }
+
+ /*COST FLEX*/
+
+
+ .cost {
+     display: flex;
+     margin-top: auto;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .cost > span{
+     display: block;
+     line-height: .4;
+ }
+
+ .cost-currency{
+     font-size: 2em;
+ }
+
+ .cost-dollars{
+     font-size: 4em;
+ }
+
+ .cost-cents{
+     font-size: 1.5em;
+     align-self: flex-start;
+ }
+
+ a.cta-button {
+     display: block;
+     width: 100%;
+     margin-top: auto;
+     text-decoration: none;
+     padding: .5em 1em;
+     background-color: darkorange;
+     color: black;
+     font-weight: bolder;
+ }
+
+ /*SIDEBAR*/
+
+
+
+
+ .sidebar-bottom{
+     display: flex;
+     flex-direction: column;
+ }
+ .sidebar-top{
+     padding: 1.5em;
+ }
+
+ .sidebar-top{
+     background-color: dimgray;
+ }
+
+ .sidebar-top h3{
+     margin: 0;
+     font-size: .9em;
+     font-weight: bold;
+     text-transform: uppercase;
+     text-align: right;
+ }
+
+ .sidebar-top label{
+     display: block;
+     text-align: left;
+     font-weight: bold;
+ }
+
+ .sidebar-top input[type="text"], .sidebar-top input[type="password"]{
+     display: block;
+     width: 100%;
+     margin-top: 0;
+     border: 1px solid #4a5952;
+     padding: .5em 1em;
+ }
+
+ .sidebar-bottom{
+     background-color: #b1afaf;
+ }
+
+ /*SPECIAL OFFER BANNER*/
+
+ .centered{
+     text-align: center;
  }
