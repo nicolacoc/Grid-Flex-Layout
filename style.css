@@ -186,3 +186,7 @@
  .centered{
      text-align: center;
  }
+
+ .sidebar-bottom{
+     max-height: 200px;
+ }
