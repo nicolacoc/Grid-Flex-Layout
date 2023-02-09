@@ -139,8 +139,9 @@
 
  /*SIDEBAR*/
 
-
-
+.tile{
+    flex: 1;
+}
 
  .sidebar-bottom{
      display: flex;
