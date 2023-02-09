@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Named Grid Area</title>
+    <style>
+        body {
+            font-family: "Calibri", sans-serif;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1080px;
+        }
+
+        .container > * {
+            background-color: blue;
+            border-radius: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+        }
+
+
+        /*GRID*/
+
+        .container{
+            display: grid;
+            grid-template-areas: "header header"
+                                 "nav nav"
+                                 "main sidebar1"
+                                 "main sidebar2";
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: .5em;
+        }
+
+        .a{
+            grid-column: main;
+            grid-row: main;
+            background-color: red;
+        }
+
+        .b{
+            grid-column: header;
+            grid-row: header;
+            background-color: green;
+        }
+
+        .c{
+            grid-column: nav;
+            grid-row: nav;
+            background-color: blueviolet;
+        }
+
+        .d{
+            grid-column: sidebar1;
+            grid-row: sidebar1;
+            background-color: darkcyan;
+        }
+
+        .e{
+            grid-column: sidebar2;
+            grid-row: sidebar2;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="d">d</div>
+    <div class="e">e</div>
+</div>
+</body>
+</html>
