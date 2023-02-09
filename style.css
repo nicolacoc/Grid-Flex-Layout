@@ -95,6 +95,8 @@
      margin-right: auto;
  }
 
+ /*SPECIAL OFFER BANNER*/
+
  /*COST FLEX*/
 
 
@@ -166,7 +168,8 @@
      font-weight: bold;
  }
 
- .sidebar-top input[type="text"], .sidebar-top input[type="password"]{
+ .sidebar-top input[type="text"],
+ .sidebar-top input[type="password"]{
      display: block;
      width: 100%;
      margin-top: 0;
@@ -178,7 +181,7 @@
      background-color: #b1afaf;
  }
 
- /*SPECIAL OFFER BANNER*/
+
 
  .centered{
      text-align: center;
