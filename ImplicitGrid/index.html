@@ -3,12 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Implicit Grid</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #428f96;
+            font-family: "Calibri", sans-serif;
+        }
+
+        .portfolio {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            margin: 0;
+            display: block;
+        }
+
+        figure figcaption {
+            margin: 0;
+            padding: .3em .8em;
+            text-align: right;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /*GRID*/
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 1fr;
+            grid-gap: 1em;
+        }
+
+        .portfolio .featured {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        /*GRID DENSE*/
+
+        .portfolio {
+            grid-auto-flow: dense;
+        }
+
+        /*fill unwanted space*/
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #000;
+            background-color: #333;
+        }
+
+        figure img {
+            flex: 1;
+            object-fit: cover;
+        }
+
+    </style>
 </head>
 <body>
 <div class="portfolio">
-  <figure>
-
-  </figure>
+    <figure>
+        <img src="Layout/AdobeStock_470662518_Preview.jpeg" alt="image1">
+        <figcaption>Image 1</figcaption>
+    </figure>
+    <figure class="featured">
+        <img src="Layout/AdobeStock_476112891_Preview.jpeg" alt="image2">
+        <figcaption>Image 2</figcaption>
+    </figure>
+    <figure>
+        <img src="Layout/AdobeStock_476155062_Preview.jpeg" alt="image3">
+        <figcaption>Image 3</figcaption>
+    </figure>
+    <figure>
+        <img src="Layout/AdobeStock_476250947_Preview.jpeg" alt="image4">
+        <figcaption>Image 4</figcaption>
+    </figure>
+    <figure>
+        <img src="Layout/AdobeStock_477707695_Preview.jpeg" alt="image5">
+        <figcaption>Image 5</figcaption>
+    </figure>
+    <figure class="featured">
+        <img src="Layout/AdobeStock_478460333_Preview.jpeg" alt="image6">
+        <figcaption>Image 6</figcaption>
+    </figure>
+    <figure class="featured">
+        <img src="Layout/AdobeStock_478290330_Preview.jpeg" alt="image7">
+        <figcaption>Image 7</figcaption>
+    </figure>
 </div>
 </body>
 </html>
